@@ -25,6 +25,7 @@ battery arrangement with ČEZ to offset grid costs.
 | `Data/Zatez{year}.xlsx` | Household consumption, PV production, grid exchange (monthly / daily / hourly) | App export |
 | `Data/dly-0-20000-0-11519-RGLB_D.csv` | Daily global solar irradiation \[kJ/m²\] | CHMI — Praha Karlov station (~20 km) |
 | `Data/dly-0-203-0-11563-TPM.csv` | Daily mean temperature \[°C\] | CHMI — Brandýs nad Labem station (~7 km) |
+| `prices2022-2026.csv` | Annual electricity prices for D02d tariff: full grid import price, virtual battery drawback price (regulated only), and VB monthly service fee — all in Kč/kWh or Kč/month incl. 21 % VAT | Manually compiled from ČEZ press releases, ERÚ tariff sheets, and TZB-info yearly summaries |
 
 Energy columns in Zatez files:
 - `Zátěž` — total household consumption
