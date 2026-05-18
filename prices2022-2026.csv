@@ -1,0 +1,26 @@
+# ČEZ D02d tariff prices — all values in Kč/kWh including 21% VAT
+# import_czk_kwh         : total price for 1 kWh imported from the grid (D02d, all components)
+# virtual_battery_czk_kwh: price for 1 kWh drawn from virtual battery (regulated only, no commodity)
+# vb_monthly_fee_czk     : fixed monthly fee for the "Elektřina pro soláry" VB service
+#
+# Sources: TZB-info yearly articles 2022–2026; ČEZ press releases; ERÚ / usetreno.cz
+# Confidence: total price confirmed all years; VB price confirmed 2025–2026; 2022–2024 derived
+#   2022: distribution 2.75 + sys.services 0.14 + POZE avg 0.45 (waived Oct–Dec) + tax 0.03
+#   2023: distribution 2.55 + sys.services 0.14 + POZE 0 (waived full year) + tax 0.03
+#         total capped by gov. stabilisation law (uncapped market ~13 Kč/kWh)
+#   2024: regulated derived from ČEZ's announced 207 Kč/MWh (excl.VAT) cut entering 2025
+#
+# VB fee sources / notes:
+#   2022: 423.50 Kč/mo — system connected Apr 2022; fee schedule confirmed from Sep 2022;
+#         assuming full 9 months (Apr–Dec) at this rate → stored as monthly value here
+#   2023: 423.50 Kč/mo
+#   2024: reduced to ~199.65 Kč/mo (exact transition date unclear — verify with ČEZ invoice)
+#   2025: 128 Kč/mo base + 624 Kč/mo surcharge if annual export > 4 MWh (likely threshold exceeded)
+#         → 752 Kč/mo; surcharge in force from Apr 2025 — averaged across 12 months ≈ 596 Kč/mo
+#   2026: same structure as 2025; using 752 Kč/mo
+year,import_czk_kwh,virtual_battery_czk_kwh,vb_monthly_fee_czk,notes
+2022,6.52,3.37,423.50,9 months active (Apr–Dec); POZE waived Oct–Dec
+2023,8.17,2.72,423.50,gov. price cap; POZE 0 full year
+2024,7.68,3.33,199.65,VB fee reduced; prices derived
+2025,7.48,3.38,596.00,128 + vol. surcharge avg; commodity confirmed
+2026,6.61,2.75,752.00,commodity confirmed; partial year in data

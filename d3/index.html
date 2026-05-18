@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Power Plant – Visualizations</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- d3-sankey is not in core D3; load from unpkg -->
+  <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Solar Power Plant · Čelákovice</h1>
+    <p class="subtitle">9.45 kWp &nbsp;·&nbsp; 14.4 kWh battery &nbsp;·&nbsp; 2022 – 2026</p>
+  </header>
+
+  <main>
+
+    <section class="viz-section">
+      <h2>Daily Production Heatmap</h2>
+      <p class="description">
+        Each cell represents one day. Color intensity shows energy produced in kWh.
+        Hover for exact values.
+      </p>
+      <div id="calendar-heatmap"></div>
+    </section>
+
+    <section class="viz-section">
+      <h2>Energy Flow</h2>
+      <p class="description">
+        Total energy flows through the system over the full measurement period (MWh).
+        From solar panels through self-consumption and grid interaction to the household.
+      </p>
+      <div id="sankey-diagram"></div>
+    </section>
+
+  </main>
+
+  <script src="js/calendar_heatmap.js"></script>
+  <script src="js/sankey.js"></script>
+
+</body>
+</html>

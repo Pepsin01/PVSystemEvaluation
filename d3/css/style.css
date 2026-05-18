@@ -1,0 +1,79 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+}
+
+header {
+  background: #1a1a2e;
+  color: white;
+  padding: 1.8rem 3rem;
+  border-bottom: 3px solid #F7A600;
+}
+
+header h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin-top: 0.3rem;
+  opacity: 0.65;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.viz-section {
+  background: white;
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.viz-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #1a1a2e;
+}
+
+.description {
+  color: #666;
+  font-size: 0.88rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.5;
+}
+
+/* Calendar heatmap */
+#calendar-heatmap svg {
+  display: block;
+  overflow: visible;
+}
+
+#calendar-heatmap .day:hover {
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+/* Sankey */
+#sankey-diagram svg {
+  display: block;
+}
+
+.sankey-link:hover {
+  stroke-opacity: 0.7 !important;
+}

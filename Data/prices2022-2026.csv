@@ -1,0 +1,17 @@
+# ČEZ D02d tariff prices — all values in Kč/kWh including VAT (21 %)
+# import_czk_kwh      : total price paid for 1 kWh imported from the grid
+# virtual_battery_czk_kwh : price paid for 1 kWh drawn from virtual battery
+#                           (regulated components only — commodity is waived)
+# Sources: TZB-info yearly price articles (2022–2026); ČEZ press releases;
+#          ERÚ regulated-component data via usetreno.cz
+# Confidence: 2025–2026 commodity confirmed; 2022–2024 virtual_battery is derived
+#   2022: distribution 2.75 + sys.services 0.14 + POZE avg 0.45 + tax 0.03
+#   2023: distribution 2.55 + sys.services 0.14 + POZE 0 (waived) + tax 0.03
+#         total capped by gov. stabilisation law (uncapped market was ~13 Kč)
+#   2024: regulated derived from announced 207 Kč/MWh (excl.VAT) ČEZ cut 2024→2025
+year,import_czk_kwh,virtual_battery_czk_kwh,notes
+2022,6.52,3.37,POZE waived Oct–Dec; VB service started Sep 2022
+2023,8.17,2.72,gov. price cap applied; POZE 0 full year
+2024,7.68,3.33,VB price derived
+2025,7.48,3.38,commodity confirmed (4.10 Kč/kWh)
+2026,6.61,2.75,commodity confirmed (3.86 Kč/kWh)
